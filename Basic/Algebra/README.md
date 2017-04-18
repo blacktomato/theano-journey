@@ -35,6 +35,8 @@
     By calling `T.dscalar` with a `string` argument, you create a Variable representing a floating-point scalar quantity with the given name. 
     If you provide no argument, the symbol will be unnamed. **Names are not required, but they can help debugging.**
 
+2. ***Define pre-function***
+
     The next step is to combine x and y into their sum z:
 
         >>> z = x + y
@@ -45,13 +47,15 @@
         >>> print(pp(z))
         (x + y)
 
-The last step is to create a function taking x and y as inputs and giving z as output:
+3. ***Define function***
+
+    The last step is to create a function taking x and y as inputs and giving z as output:
 
         >>> f = function([x, y], z)
 
-The first argument to function is a `list` of Variables that will be provided as inputs to the function. 
+    The first argument to function is a `list` of Variables that will be provided as inputs to the function. 
 The second argument is **a single Variable or a list of Variables**.
-For either case, the second argument is what we want to see as output when we apply the function. `f` may then be used like a normal Python function.
+    For either case, the second argument is what we want to see as output when we apply the function. `f` may then be used like a normal Python function.
 
 [Type]: http://deeplearning.net/software/theano_versions/dev/extending/graphstructures.html#type
 
