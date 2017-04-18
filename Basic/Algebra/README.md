@@ -35,6 +35,24 @@
     By calling `T.dscalar` with a `string` argument, you create a Variable representing a floating-point scalar quantity with the given name. 
     If you provide no argument, the symbol will be unnamed. **Names are not required, but they can help debugging.**
 
+    The next step is to combine x and y into their sum z:
+
+        >>> z = x + y
+
+    z is *yet* another Variable which represents the addition of x and y. You can use the `pp` function to pretty-print out the computation associated to z.
+
+        >>> from theano import pp
+        >>> print(pp(z))
+        (x + y)
+
+The last step is to create a function taking x and y as inputs and giving z as output:
+
+        >>> f = function([x, y], z)
+
+The first argument to function is a `list` of Variables that will be provided as inputs to the function. 
+The second argument is **a single Variable or a list of Variables**.
+For either case, the second argument is what we want to see as output when we apply the function. `f` may then be used like a normal Python function.
+
 [Type]: http://deeplearning.net/software/theano_versions/dev/extending/graphstructures.html#type
 
 <h4 id = "matrix">Adding\_two\_Matrices.py</h4>
