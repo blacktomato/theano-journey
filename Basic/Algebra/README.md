@@ -18,7 +18,7 @@
     Behind the scene, `f` was being compiled into **C code**.
 
     In Theano, **all symbols must be typed**. `T.dscalar` is the type we assign to "0-dimensional arrays fo doubles"
-    It is a Theano [Type].
+    It is a Theano [Type][1].
 
     `x` and `y` are instances of `TensorVariable`. 
     However, they are assigned the theano Type `dscalar` in their `type` field.
@@ -57,6 +57,6 @@
 The second argument is **a single Variable or a list of Variables**.
     For either case, the second argument is what we want to see as output when we apply the function. `f` may then be used like a normal Python function.
 
-[Type]: http://deeplearning.net/software/theano_versions/dev/extending/graphstructures.html#type
+[1]: http://deeplearning.net/software/theano_versions/dev/extending/graphstructures.html#type
 
 <h4 id = "matrix">Adding\_two\_Matrices.py</h4>
